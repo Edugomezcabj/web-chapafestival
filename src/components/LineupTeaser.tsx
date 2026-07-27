@@ -90,7 +90,7 @@ export default function LineupTeaser() {
 
             {subscribed ? (
               <div className="bg-yellow-400 text-black font-heading font-black text-lg py-4 px-8 rounded-full inline-block uppercase tracking-wider animate-bounce">
-                ¡ESTÁS EN LA LISTA! TE AVISAREMOS APENAS SALGA LA FASE 1 🔥
+                ¡ESTÁS EN LA LISTA! TE AVISAREMOS APENAS SALGA LA FASE 1
               </div>
             ) : (
               <form

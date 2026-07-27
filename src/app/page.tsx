@@ -2,9 +2,6 @@ import Navbar from "@/components/Navbar";
 import SocialSidebar from "@/components/SocialSidebar";
 import Hero from "@/components/Hero";
 import Manifesto from "@/components/Manifesto";
-import ChapaHomePromo from "@/components/ChapaHomePromo";
-import ExperienceGrid from "@/components/ExperienceGrid";
-import LineupTeaser from "@/components/LineupTeaser";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -14,9 +11,6 @@ export default function Home() {
       <SocialSidebar />
       <Hero />
       <Manifesto />
-      <ChapaHomePromo />
-      <ExperienceGrid />
-      <LineupTeaser />
       <Footer />
     </main>
   );

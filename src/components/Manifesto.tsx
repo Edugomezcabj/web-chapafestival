@@ -5,17 +5,17 @@ import React from "react";
 export default function Manifesto() {
   const stats = [
     {
-      number: "🧉 RITUAL",
+      number: "RITUAL",
       title: "YERBEADO & TORTITAS",
       desc: "La marca registrada del amanecer mendocino: yerbeado caliente gigante y miles de tortitas raspadas y pinchadas gratis al salir el sol.",
     },
     {
-      number: "🚐 SORTEO",
+      number: "SORTEO",
       title: "DEL 'CHAPAHOME'",
       desc: "Con tu entrada de EntradaWeb participás por el sorteo de nuestra combi rodante equipada para viajar con tus amigxs.",
     },
     {
-      number: "📍 SAN MARTÍN",
+      number: "SAN MARTÍN",
       title: "TEMPLO DEL ESTE",
       desc: "El punto de encuentro más épico del Este mendocino en el Autódromo Ciudad de San Martín con escenarios en vivo, food trucks y kermés.",
     },
@@ -32,11 +32,8 @@ export default function Manifesto() {
 
       <div className="max-w-5xl mx-auto text-center relative z-10">
         {/* Etiqueta / Tag superior */}
-        <div className="inline-flex items-center gap-2 bg-white/5 border border-white/15 rounded-full px-4 py-1.5 mb-8">
-          <span className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
-          <span className="font-heading text-xs font-semibold uppercase tracking-widest text-yellow-400">
-            ORGULLO MENDOCINO • CHAPANAY CITY
-          </span>
+        <div className="inline-block bg-yellow-400 text-black font-heading font-black text-xs uppercase px-4 py-1.5 rounded-sm border-2 border-black mb-8 shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)]">
+          ORGULLO MENDOCINO • CHAPANAY CITY
         </div>
 
         {/* Declaración Gigante al estilo Lollapalooza */}

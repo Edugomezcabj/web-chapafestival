@@ -23,9 +23,6 @@ export default function Navbar() {
   const navLinks = [
     { name: "INICIO", href: "#inicio" },
     { name: "MISA CHAPANAYA", href: "#manifiesto" },
-    { name: "TRADICIONES", href: "#tradiciones" },
-    { name: "EXPERIENCIA", href: "#experiencia" },
-    { name: "LINEUP", href: "#lineup" },
     { name: "CÓMO LLEGAR", href: "#ubicacion" },
   ];
 

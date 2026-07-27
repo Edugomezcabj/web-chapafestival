@@ -127,6 +127,16 @@ export default function Footer() {
             <ul className="flex flex-col gap-3 font-sans text-sm text-white/70">
               <li>
                 <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-yellow-400 transition-colors flex items-center gap-2"
+                >
+                  <span>Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://www.instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -137,32 +147,22 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.tiktok.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-yellow-400 transition-colors flex items-center gap-2"
-                >
-                  <span>TikTok</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.youtube.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-yellow-400 transition-colors flex items-center gap-2"
-                >
-                  <span>YouTube</span>
-                </a>
-              </li>
-              <li>
-                <a
                   href="https://x.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-yellow-400 transition-colors flex items-center gap-2"
                 >
                   <span>X (Twitter)</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.tiktok.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-yellow-400 transition-colors flex items-center gap-2"
+                >
+                  <span>TikTok</span>
                 </a>
               </li>
             </ul>

@@ -34,11 +34,10 @@ export default function ChapaHomePromo() {
             <div className="absolute -right-10 -bottom-10 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
             <div>
-              <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center mb-8">
                 <span className="inline-block px-3 py-1 bg-amber-400 text-black font-heading font-bold text-xs uppercase tracking-wider rounded-sm">
                   RITUAL DEL AMANECER
                 </span>
-                <span className="text-4xl">🧉</span>
               </div>
 
               <h3 className="font-display text-3xl sm:text-5xl uppercase tracking-tight text-white mb-4 group-hover:text-amber-400 transition-colors">
@@ -68,11 +67,10 @@ export default function ChapaHomePromo() {
             <div className="absolute -right-10 -bottom-10 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
             <div>
-              <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center mb-8">
                 <span className="inline-block px-3 py-1 bg-orange-500 text-white font-heading font-bold text-xs uppercase tracking-wider rounded-sm">
                   SORTEO CON TU TICKET
                 </span>
-                <span className="text-4xl">🚐</span>
               </div>
 
               <h3 className="font-display text-3xl sm:text-5xl uppercase tracking-tight text-white mb-4 group-hover:text-orange-400 transition-colors">
