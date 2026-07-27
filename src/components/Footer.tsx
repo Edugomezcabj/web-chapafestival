@@ -150,7 +150,7 @@ export default function Footer() {
         {/* Separador e Información Legal */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-xs text-white/50">
           <div>
-            © {new Date().getFullYear()} Chapafestival ℗. Todos los derechos
+            © Chapafestival {new Date().getFullYear()}. Todos los derechos
             reservados.
           </div>
           <div className="flex items-center gap-6">

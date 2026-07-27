@@ -33,7 +33,7 @@ export default function Navbar() {
         {/* Logo & Fecha (Estilo Lollapalooza + Chapanay City) */}
         <div className="flex items-center gap-3">
           <a href="#inicio" className="flex items-center gap-3 group">
-            <div className="bg-yellow-400 text-black font-display font-black text-2xl px-3 py-1 rounded-sm border-2 border-black shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)] group-hover:bg-yellow-300 transition-colors">
+            <div className="bg-yellow-400 text-black font-display font-black text-2xl px-3 py-1 rounded-sm border-2 border-black shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)] group-hover:shadow-[1px_1px_0px_0px_rgba(255,255,255,0.2)] group-hover:translate-x-0.5 group-hover:translate-y-0.5 group-hover:bg-yellow-300 transition-all">
               CHF 2026
             </div>
           </a>

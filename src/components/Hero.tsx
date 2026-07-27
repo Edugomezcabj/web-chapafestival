@@ -77,7 +77,7 @@ export default function Hero() {
       <div className="relative z-10 grid grid-cols-4 gap-4 sm:gap-8 md:gap-14 my-6 text-center">
         {/* Días */}
         <div className="flex flex-col items-center">
-          <span className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-normal tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+          <span className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-normal tracking-tight">
             {timeLeft.days}
           </span>
           <span className="font-heading font-bold text-xs sm:text-sm md:text-base text-white/80 uppercase tracking-widest mt-1 sm:mt-2">
@@ -87,7 +87,7 @@ export default function Hero() {
 
         {/* Horas */}
         <div className="flex flex-col items-center">
-          <span className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-normal tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+          <span className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-normal tracking-tight">
             {String(timeLeft.hours).padStart(2, "0")}
           </span>
           <span className="font-heading font-bold text-xs sm:text-sm md:text-base text-white/80 uppercase tracking-widest mt-1 sm:mt-2">
@@ -97,7 +97,7 @@ export default function Hero() {
 
         {/* Minutos */}
         <div className="flex flex-col items-center">
-          <span className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-normal tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+          <span className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-normal tracking-tight">
             {String(timeLeft.minutes).padStart(2, "0")}
           </span>
           <span className="font-heading font-bold text-xs sm:text-sm md:text-base text-white/80 uppercase tracking-widest mt-1 sm:mt-2">
@@ -107,7 +107,7 @@ export default function Hero() {
 
         {/* Segundos */}
         <div className="flex flex-col items-center">
-          <span className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-normal tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+          <span className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-normal tracking-tight">
             {String(timeLeft.seconds).padStart(2, "0")}
           </span>
           <span className="font-heading font-bold text-xs sm:text-sm md:text-base text-white/80 uppercase tracking-widest mt-1 sm:mt-2">
@@ -127,9 +127,6 @@ export default function Hero() {
           ADQUIRÍ TUS ENTRADAS
         </a>
       </div>
-
-      {/* Decoración inferior de transición oscura */}
-      <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black to-transparent pointer-events-none z-10"></div>
     </section>
   );
 }
