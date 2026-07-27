@@ -6,7 +6,7 @@ export default function SocialSidebar() {
   const socials = [
     {
       name: "Facebook",
-      href: "https://www.facebook.com",
+      href: "https://www.facebook.com/ChapanayCity",
       label: "FB",
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -16,7 +16,7 @@ export default function SocialSidebar() {
     },
     {
       name: "Instagram",
-      href: "https://www.instagram.com",
+      href: "https://www.instagram.com/ChapanayCity",
       label: "IG",
       icon: (
         <svg
@@ -36,7 +36,7 @@ export default function SocialSidebar() {
     },
     {
       name: "TikTok",
-      href: "https://www.tiktok.com",
+      href: "https://www.tiktok.com/@ChapanayCity_",
       label: "TK",
       icon: (
         <svg
@@ -50,7 +50,7 @@ export default function SocialSidebar() {
     },
     {
       name: "X",
-      href: "https://x.com",
+      href: "https://x.com/ChapanayCityOK",
       label: "X",
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

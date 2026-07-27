@@ -31,19 +31,29 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/85 backdrop-blur-md border-b border-white/10 transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Logo & Fecha (Estilo Lollapalooza + Chapanay City) */}
-        <a href="#inicio" className="flex items-center gap-3 group">
-          <div className="bg-yellow-400 text-black font-display font-black text-2xl px-3 py-1 rounded-sm border-2 border-black shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)] group-hover:bg-yellow-300 transition-colors">
-            CHF 2026
-          </div>
+        <div className="flex items-center gap-3">
+          <a href="#inicio" className="flex items-center gap-3 group">
+            <div className="bg-yellow-400 text-black font-display font-black text-2xl px-3 py-1 rounded-sm border-2 border-black shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)] group-hover:bg-yellow-300 transition-colors">
+              CHF 2026
+            </div>
+          </a>
           <div className="hidden sm:flex flex-col">
             <span className="font-heading font-bold text-xs sm:text-sm tracking-widest text-yellow-400 uppercase">
               CHAPANAY CITY
             </span>
-            <span className="text-white/70 text-xs font-sans tracking-wide">
-              Autódromo Ciudad de San Martín, Mendoza
-            </span>
+            <a
+              href="https://maps.app.goo.gl/ASv4fMbgjnjYK5zX9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/70 hover:text-yellow-400 text-xs font-sans tracking-wide transition-colors w-fit"
+              title="Ver ubicación en Google Maps"
+            >
+              <span className="underline decoration-white/30 hover:decoration-yellow-400">
+                Autódromo Ciudad de San Martín, Mendoza
+              </span>
+            </a>
           </div>
-        </a>
+        </div>
 
         {/* Menú Desktop */}
         <nav className="hidden lg:flex items-center gap-8">
@@ -108,11 +118,16 @@ export default function Navbar() {
           <div className="flex flex-col gap-5">
             <div className="sm:hidden pb-3 border-b border-white/10">
               <p className="font-heading font-bold text-sm text-yellow-400 uppercase">
-                Sábado 21 de Noviembre 2026
+                Domingo 22 de Noviembre 2026
               </p>
-              <p className="text-white/70 text-xs">
-                Autódromo Ciudad de San Martín, Mendoza
-              </p>
+              <a
+                href="https://maps.app.goo.gl/ASv4fMbgjnjYK5zX9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-yellow-400 text-xs underline decoration-white/30 hover:decoration-yellow-400 transition-colors mt-1 w-fit"
+              >
+                <span>Autódromo Ciudad de San Martín, Mendoza</span>
+              </a>
             </div>
             {navLinks.map((link) => (
               <a

@@ -19,9 +19,17 @@ export default function Footer() {
               El festival oficial de Chapanay City. Donde el
               humor mendocino, la música y el yerbeado se unen hasta el amanecer.
             </p>
-            <p className="font-heading font-bold text-xs uppercase tracking-widest text-yellow-400">
-              AUTÓDROMO CIUDAD DE SAN MARTÍN, MENDOZA
-            </p>
+            <a
+              href="https://maps.app.goo.gl/ASv4fMbgjnjYK5zX9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-heading font-bold text-xs uppercase tracking-widest text-yellow-400 hover:text-white transition-colors w-fit"
+              title="Ver ubicación en Google Maps"
+            >
+              <span className="underline decoration-yellow-400/50 hover:decoration-white">
+                AUTÓDROMO CIUDAD DE SAN MARTÍN, MENDOZA
+              </span>
+            </a>
           </div>
 
           {/* Festival */}
@@ -80,14 +88,6 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#acceso"
-                  className="hover:text-yellow-400 transition-colors"
-                >
-                  Ingreso con QR
-                </a>
-              </li>
-              <li>
-                <a
                   href="#transporte"
                   className="hover:text-yellow-400 transition-colors"
                 >
@@ -105,7 +105,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-3 font-sans text-sm text-white/70">
               <li>
                 <a
-                  href="https://www.facebook.com"
+                  href="https://www.facebook.com/ChapanayCity"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-yellow-400 transition-colors flex items-center gap-2"
@@ -115,7 +115,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/ChapanayCity"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-yellow-400 transition-colors flex items-center gap-2"
@@ -125,7 +125,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.tiktok.com"
+                  href="https://www.tiktok.com/@ChapanayCity_"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-yellow-400 transition-colors flex items-center gap-2"
@@ -135,7 +135,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://x.com"
+                  href="https://x.com/ChapanayCityOK"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-yellow-400 transition-colors flex items-center gap-2"

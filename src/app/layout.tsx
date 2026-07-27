@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Anton, Oswald, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -19,7 +19,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Chapafestival 2026 | Chapanay City | La Misa Chapanaya en San Martín",
+  title: "Chapafestival 2026",
   description:
     "El festival de Chapanay City en el Autódromo Ciudad de San Martín, Mendoza. Música en vivo, cumbia, cuarteto, cachengue, sorteo del ChapaHome y el tradicional yerbeado con tortitas al amanecer.",
   keywords: [
@@ -35,12 +35,29 @@ export const metadata: Metadata = {
     "EntradaWeb",
   ],
   openGraph: {
-    title: "Chapafestival 2026 | Chapanay City | La Misa Chapanaya",
+    title: "Chapafestival 2026",
     description:
       "La fiesta más manija del Este mendocino. Música en vivo, sorteo del ChapaHome y yerbeado con tortitas al amanecer en el Autódromo San Martín.",
     type: "website",
     locale: "es_AR",
+    siteName: "Chapafestival 2026",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/site.webmanifest",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#000000",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({

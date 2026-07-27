@@ -11,8 +11,8 @@ export default function Hero() {
   });
 
   useEffect(() => {
-    // Fecha objetivo: 21 de Noviembre de 2026 a las 18:00 hs
-    const targetDate = new Date("2026-11-21T18:00:00-03:00").getTime();
+    // Fecha objetivo: 22 de Noviembre de 2026 a las 21:00 hs
+    const targetDate = new Date("2026-11-22T21:00:00-03:00").getTime();
 
     const updateCountdown = () => {
       const now = Date.now();
@@ -60,7 +60,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70 z-0 pointer-events-none"></div>
 
       <div className="relative z-10 inline-block bg-yellow-400 text-black font-display font-black text-xl sm:text-2xl px-6 py-2 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8 uppercase tracking-wide">
-        21 DE NOVIEMBRE 2026
+        22 DE NOVIEMBRE 2026
       </div>
 
       {/* Bloques de Banner al estilo Cosquín Rock */}
@@ -124,7 +124,7 @@ export default function Hero() {
           rel="noopener noreferrer"
           className="inline-block bg-[#d94814] hover:bg-[#bf3d0f] text-white font-display text-xl sm:text-2xl px-10 py-4 rounded-full transition-all transform hover:-translate-y-1 hover:scale-105 shadow-2xl tracking-wider uppercase border border-white/20"
         >
-          TICKETS DISPONIBLES
+          ADQUIRÍ TUS ENTRADAS
         </a>
       </div>
 
