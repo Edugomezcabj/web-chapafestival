@@ -20,10 +20,11 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // ACÁ ESTÁN LOS CAMBIOS: Textos e IDs actualizados
   const navLinks = [
     { name: "INICIO", href: "#inicio" },
-    { name: "MISA CHAPANAYA", href: "#manifiesto" },
-    { name: "CÓMO LLEGAR", href: "#ubicacion" },
+    { name: "FIESTA CHAPANAYA", href: "#fiesta-chapanaya" },
+    { name: "INFO IMPORTANTE", href: "#como-llegar" },
   ];
 
   return (
@@ -32,11 +33,11 @@ export default function Navbar() {
         {/* Logo & Fecha (Estilo Lollapalooza + Chapanay City) */}
         <a href="#inicio" className="flex items-center gap-3 group">
           <div className="bg-yellow-400 text-black font-display font-black text-2xl px-3 py-1 rounded-sm border-2 border-black shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)] group-hover:bg-yellow-300 transition-colors">
-            CHAPA
+            CHF 2026
           </div>
           <div className="hidden sm:flex flex-col">
             <span className="font-heading font-bold text-xs sm:text-sm tracking-widest text-yellow-400 uppercase">
-              CHAPANAY CITY PRESENTA • 21 DE NOVIEMBRE
+              CHAPANAY CITY
             </span>
             <span className="text-white/70 text-xs font-sans tracking-wide">
               Autódromo Ciudad de San Martín, Mendoza
@@ -50,10 +51,10 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="font-heading font-semibold text-sm tracking-widest uppercase text-white/90 hover:text-yellow-400 transition-colors relative py-1 group"
+              className="font-heading font-bold text-sm text-white/90 hover:text-yellow-400 tracking-widest uppercase transition-colors relative py-1 group"
             >
               {link.name}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </nav>
@@ -66,7 +67,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="bg-orange-500 hover:bg-orange-600 text-white font-display font-black text-sm sm:text-base px-6 py-2.5 rounded-full border-2 border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,0.9)] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.9)] hover:translate-x-0.5 hover:translate-y-0.5 transition-all tracking-wider uppercase"
           >
-            CONSEGUÍ TU LUGAR
+            TICKETS DISPONIBLES
           </a>
 
           {/* Menú Mobile Trigger */}
@@ -128,7 +129,7 @@ export default function Navbar() {
       )}
 
       {/* Progress bar al estilo de Lollapalooza AR */}
-      <div className="w-full bg-white/10 h-1 overflow-hidden">
+      <div className="w-full bg-white/10 h-2.5 overflow-hidden">
         <div
           className="bg-gradient-to-r from-yellow-400 via-orange-500 to-fuchsia-500 h-full transition-all duration-150"
           style={{ width: `${scrollProgress}%` }}

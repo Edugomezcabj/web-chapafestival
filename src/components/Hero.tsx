@@ -59,7 +59,7 @@ export default function Hero() {
       {/* Capa oscura de contraste sobre el video */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70 z-0 pointer-events-none"></div>
 
-      <div className="relative z-10 inline-block bg-yellow-400 text-black font-display font-black text-xl sm:text-2xl px-5 py-1.5 rounded-sm border-2 border-black shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)] mb-8 uppercase tracking-wide">
+      <div className="relative z-10 inline-block bg-yellow-400 text-black font-display font-black text-xl sm:text-2xl px-6 py-2 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8 uppercase tracking-wide">
         21 DE NOVIEMBRE 2026
       </div>
 
@@ -124,7 +124,7 @@ export default function Hero() {
           rel="noopener noreferrer"
           className="inline-block bg-[#d94814] hover:bg-[#bf3d0f] text-white font-display text-xl sm:text-2xl px-10 py-4 rounded-full transition-all transform hover:-translate-y-1 hover:scale-105 shadow-2xl tracking-wider uppercase border border-white/20"
         >
-          CONSEGUÍ TU LUGAR AHORA
+          TICKETS DISPONIBLES
         </a>
       </div>
 

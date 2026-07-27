@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import SocialSidebar from "@/components/SocialSidebar";
 import Hero from "@/components/Hero";
-import Manifesto from "@/components/Manifesto";
+import ExperienceScroll from "@/components/ExperienceScroll";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <Navbar />
       <SocialSidebar />
       <Hero />
-      <Manifesto />
+      <ExperienceScroll />
       <Footer />
     </main>
   );
