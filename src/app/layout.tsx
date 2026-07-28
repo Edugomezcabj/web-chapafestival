@@ -19,9 +19,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Chapafestival 2026",
+  metadataBase: new URL("https://www.chapafestival.com"),
+  title: "Chapafestival 2026 | Chapanay City",
   description:
-    "El festival de Chapanay City en el Autódromo Ciudad de San Martín, Mendoza. Música en vivo, cumbia, cuarteto, cachengue, sorteo del ChapaHome y el tradicional yerbeado con tortitas al amanecer.",
+    "El festival oficial de Chapanay City. Donde el humor mendocino, la música y el yerbeado se unen hasta el amanecer.",
   keywords: [
     "Chapafestival",
     "Chapanay City",
@@ -34,13 +35,44 @@ export const metadata: Metadata = {
     "Entradas Chapafestival",
     "EntradaWeb",
   ],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "Chapafestival 2026",
+    title: "Chapafestival 2026 | Chapanay City",
     description:
-      "La fiesta más manija del Este mendocino. Música en vivo, sorteo del ChapaHome y yerbeado con tortitas al amanecer en el Autódromo San Martín.",
+      "El festival oficial de Chapanay City. Donde el humor mendocino, la música y el yerbeado se unen hasta el amanecer.",
+    url: "https://www.chapafestival.com",
     type: "website",
     locale: "es_AR",
     siteName: "Chapafestival 2026",
+    images: [
+      {
+        url: "/foto-1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Chapafestival 2026 - El festival oficial de Chapanay City",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Chapafestival 2026 | Chapanay City",
+    description:
+      "El festival oficial de Chapanay City. Donde el humor mendocino, la música y el yerbeado se unen hasta el amanecer.",
+    creator: "@ChapanayCityOK",
+    images: ["/foto-1.jpg"],
   },
   icons: {
     icon: [

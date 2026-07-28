@@ -69,6 +69,7 @@ export default function SocialSidebar() {
           target="_blank"
           rel="noopener noreferrer"
           title={social.name}
+          aria-label={social.name}
           className="w-11 h-11 bg-black/80 hover:bg-yellow-400 text-white hover:text-black border border-white/20 hover:border-black rounded-full flex items-center justify-center transition-all duration-200 transform hover:scale-110 hover:-translate-y-0.5 shadow-lg group relative"
         >
           {social.icon}
