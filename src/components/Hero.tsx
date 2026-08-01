@@ -65,10 +65,10 @@ export default function Hero() {
 
       {/* Bloques de Banner al estilo Cosquín Rock (Semántica H1 para SEO) */}
       <h1 className="relative z-10 flex flex-col items-center justify-center gap-2 sm:gap-3 mb-10 sm:mb-12">
-        <span className="bg-[#d94814] text-white font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl uppercase px-6 py-1 sm:px-10 sm:py-2 tracking-tight shadow-2xl block">
+        <span className="bg-[#d94814] text-white font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl uppercase px-2.5 py-1 sm:px-4 md:px-4.5 lg:px-5 sm:py-2 tracking-tight shadow-2xl block">
           CHAPAFESTIVAL 2026
         </span>
-        <span className="bg-[#e8dec8] text-[#d94814] font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl uppercase px-6 py-1 sm:px-10 sm:py-2 tracking-tight shadow-2xl block">
+        <span className="bg-[#e8dec8] text-[#d94814] font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl uppercase px-2.5 py-1 sm:px-4 md:px-4.5 lg:px-5 sm:py-2 tracking-tight shadow-2xl block">
           YA TIENE FECHA
         </span>
       </h1>
