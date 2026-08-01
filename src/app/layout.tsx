@@ -20,7 +20,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.chapafestival.com"),
-  title: "Chapafestival 2026 | Chapanay City",
+  title: "Chapafestival 2026 - Chapanay City",
   description:
     "El festival oficial de Chapanay City. Donde el humor mendocino, la música y el yerbeado se unen hasta el amanecer.",
   keywords: [
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Chapafestival 2026 | Chapanay City",
+    title: "Chapafestival 2026 - Chapanay City",
     description:
       "El festival oficial de Chapanay City. Donde el humor mendocino, la música y el yerbeado se unen hasta el amanecer.",
     url: "https://www.chapafestival.com",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chapafestival 2026 | Chapanay City",
+    title: "Chapafestival 2026 - Chapanay City",
     description:
       "El festival oficial de Chapanay City. Donde el humor mendocino, la música y el yerbeado se unen hasta el amanecer.",
     creator: "@ChapanayCityOK",
