@@ -6,162 +6,145 @@ export default function Footer() {
   return (
     <footer
       id="como-llegar"
-      className="bg-black border-t border-white/10 pt-20 pb-12 px-4 sm:px-6 lg:px-8 text-white"
+      className="bg-black border-t border-white/10 pt-20 pb-12 px-6 sm:px-10 lg:px-16 text-white scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-16">
-          {/* Logo y Ubicación */}
-          <div>
-            <div className="inline-block bg-yellow-400 text-black font-display font-black text-2xl px-3 py-1 rounded-sm border-2 border-black shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)] mb-4">
-              CHAPAFESTIVAL 2026
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 justify-between mb-24">
+
+          {/* Columna izquierda donde esta el título grande estilo minimalista */}
+          <div className="lg:col-span-7 flex flex-col justify-between">
+            <div>
+              <h3 className="font-black text-2xl sm:text-3xl md:text-4xl text-white tracking-tighter uppercase leading-tight max-w-xl">
+                <span className="block">La fiesta más manija</span>
+                <span className="block">de Mendoza</span>
+              </h3>
             </div>
-            <p className="font-sans text-sm text-white/70 leading-relaxed mb-4">
-              El festival oficial de Chapanay City. Donde el
-              humor mendocino, la música y el yerbeado se unen hasta el amanecer.
-            </p>
-            <a
-              href="https://maps.app.goo.gl/ASv4fMbgjnjYK5zX9"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-heading font-bold text-xs uppercase tracking-widest text-yellow-400 hover:text-white transition-colors w-fit"
-              title="Ver ubicación en Google Maps"
-            >
-              <span className="underline decoration-yellow-400/50 hover:decoration-white">
-                AUTÓDROMO CIUDAD DE SAN MARTÍN, MENDOZA
-              </span>
-            </a>
           </div>
 
-          {/* Festival */}
-          <div>
-            <h4 className="font-display text-xl uppercase text-white mb-5 tracking-wide">
-              FESTIVAL
-            </h4>
-            <ul className="flex flex-col gap-3 font-sans text-sm text-white/70">
-              <li>
-                <a
-                  href="#inicio"
-                  className="hover:text-yellow-400 transition-colors"
-                >
-                  Inicio
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#fiesta-chapanaya"
-                  className="hover:text-yellow-400 transition-colors"
-                >
-                  Fiesta Chapanaya
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#como-llegar"
-                  className="hover:text-yellow-400 transition-colors"
-                >
-                  Info importante
-                </a>
-              </li>
-            </ul>
-          </div>
+          {/* Columna derecha de Enlaces */}
+          <div className="lg:col-span-5 flex justify-start lg:justify-end">
+            <div className="grid grid-cols-2 gap-12 sm:gap-20">
 
-          {/* Ayuda & Entradas */}
-          <div>
-            <h4 className="font-display text-xl uppercase text-white mb-5 tracking-wide">
-              AYUDA
-            </h4>
-            <ul className="flex flex-col gap-3 font-sans text-sm text-white/70">
-              <li>
-                <a
-                  href="https://www.entradaweb.com.ar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-yellow-400 transition-colors font-semibold text-white"
-                >
-                  Comprar en EntradaWeb
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-yellow-400 transition-colors">
-                  Preguntas Frecuentes
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#transporte"
-                  className="hover:text-yellow-400 transition-colors"
-                >
-                  Transporte
-                </a>
-              </li>
-            </ul>
-          </div>
+              {/* Columna 1 */}
+              <div>
+                <h4 className="font-heading font-bold text-xs sm:text-sm tracking-widest text-yellow-400 uppercase mb-6">
+                  FESTIVAL
+                </h4>
+                <ul className="flex flex-col gap-3 font-sans text-sm text-white/80">
+                  <li>
+                    <a href="#inicio" className="hover:text-yellow-400 transition-colors">
+                      Inicio
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#fiesta-chapanaya" className="hover:text-yellow-400 transition-colors">
+                      Fiesta Chapanaya
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.entradaweb.com.ar"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-yellow-400 transition-colors"
+                    >
+                      Entradas
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://maps.app.goo.gl/ASv4fMbgjnjYK5zX9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-yellow-400 transition-colors"
+                    >
+                      Ubicación
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#faq" className="hover:text-yellow-400 transition-colors">
+                      Preguntas Frecuentes
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#transporte" className="hover:text-yellow-400 transition-colors">
+                      Transporte
+                    </a>
+                  </li>
+                </ul>
+              </div>
 
-          {/* Social */}
-          <div>
-            <h4 className="font-display text-xl uppercase text-white mb-5 tracking-wide">
-              COMUNIDAD
-            </h4>
-            <ul className="flex flex-col gap-3 font-sans text-sm text-white/70">
-              <li>
-                <a
-                  href="https://www.facebook.com/ChapanayCity"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-yellow-400 transition-colors flex items-center gap-2"
-                >
-                  <span>Facebook</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/ChapanayCity"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-yellow-400 transition-colors flex items-center gap-2"
-                >
-                  <span>Instagram</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.tiktok.com/@ChapanayCity_"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-yellow-400 transition-colors flex items-center gap-2"
-                >
-                  <span>TikTok</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://x.com/ChapanayCityOK"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-yellow-400 transition-colors flex items-center gap-2"
-                >
-                  <span>X</span>
-                </a>
-              </li>
-            </ul>
+              {/* Columna 2 */}
+              <div>
+                <h4 className="font-heading font-bold text-xs sm:text-sm tracking-widest text-yellow-400 uppercase mb-6">
+                  COMUNIDAD
+                </h4>
+                <ul className="flex flex-col gap-3 font-sans text-sm text-white/80">
+                  <li>
+                    <a
+                      href="https://www.facebook.com/ChapanayCity"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-yellow-400 transition-colors"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/ChapanayCity"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-yellow-400 transition-colors"
+                    >
+                      Instagram
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.tiktok.com/@ChapanayCity_"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-yellow-400 transition-colors"
+                    >
+                      TikTok
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://x.com/ChapanayCityOK"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-yellow-400 transition-colors"
+                    >
+                      X / Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#contacto" className="hover:text-yellow-400 transition-colors">
+                      Contacto
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
           </div>
         </div>
 
-        {/* Separador e Información Legal */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-xs text-white/50">
+        {/* Información legal en 3 partes */}
+        <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 font-sans text-xs text-white/50">
           <div>
-            © Chapafestival {new Date().getFullYear()}. Todos los derechos
-            reservados.
+            © {new Date().getFullYear()} CHAPAFESTIVAL – CHAPANAY CITY. Todos los derechos reservados.
           </div>
+
+
           <div className="flex items-center gap-6">
             <a href="#privacidad" className="hover:text-white transition-colors">
               Privacidad
             </a>
             <a href="#terminos" className="hover:text-white transition-colors">
-              Términos y Condiciones
-            </a>
-            <a href="#contacto" className="hover:text-white transition-colors">
-              Contacto
+              Términos de Uso
             </a>
           </div>
         </div>

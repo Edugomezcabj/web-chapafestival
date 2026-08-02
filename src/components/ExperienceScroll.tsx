@@ -31,7 +31,7 @@ export default function ExperienceScroll() {
     ];
 
     return (
-        <section id="fiesta-chapanaya" className="w-full flex flex-col">
+        <section id="fiesta-chapanaya" className="w-full flex flex-col scroll-mt-20">
             {pillars.map((pillar) => (
                 <article
                     key={pillar.id}
@@ -40,7 +40,7 @@ export default function ExperienceScroll() {
                 >
                     <div className="absolute inset-0 bg-black/40"></div>
 
-                    {/* Acá sucede la magia de la animación */}
+                    {/* Acá esta toda la animación de los textos que aparecen al scrollear por cada bloque */}
                     <motion.div
                         initial={{ opacity: 0, y: 100 }} // Arranca invisible y 100px más abajo
                         whileInView={{ opacity: 1, y: 0 }} // Cuando entra en pantalla, sube a su lugar y se hace visible
@@ -48,7 +48,7 @@ export default function ExperienceScroll() {
                         transition={{ duration: 0.8, ease: "easeOut" }} // Duración y suavidad del movimiento
                         className="relative z-10"
                     >
-                        {/* Tu caja con diseño original */}
+                        {/* La caja con diseño amarillo y bordes negros que se repite en cada bloque */}
                         <div className={`
               p-6 md:p-12 max-w-3xl text-center transform transition-transform duration-300 hover:scale-105
               border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]

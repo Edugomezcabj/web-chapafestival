@@ -20,17 +20,18 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ACÁ ESTÁN LOS CAMBIOS: Textos e IDs actualizados
+  // Acá están los textos e IDs actualizados que cuando se hace click redirige a la sección correspondiente
   const navLinks = [
     { name: "INICIO", href: "#inicio" },
     { name: "FIESTA CHAPANAYA", href: "#fiesta-chapanaya" },
+    { name: "PREVIA", href: "#previa" },
     { name: "INFO IMPORTANTE", href: "#como-llegar" },
   ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/85 backdrop-blur-md border-b border-white/10 transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        {/* Logo & Fecha (Estilo Lollapalooza + Chapanay City) */}
+        {/* Texto CHF 2026 del principio y fecha */}
         <div className="flex items-center gap-3">
           <a href="#inicio" className="flex items-center gap-3 group">
             <div className="bg-yellow-400 text-black font-display font-black text-2xl px-3 py-1 rounded-sm border-2 border-black shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)] group-hover:shadow-[1px_1px_0px_0px_rgba(255,255,255,0.2)] group-hover:translate-x-0.5 group-hover:translate-y-0.5 group-hover:bg-yellow-300 transition-all">
@@ -55,7 +56,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Menú Desktop */}
+        {/* Menú versión Desktop */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
@@ -69,7 +70,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Botón CTA Ticket y Hamburguesa Mobile */}
+        {/* Botón de tickets y botón de hamburguesa en celu*/}
         <div className="flex items-center gap-4">
           <a
             href="https://www.entradaweb.com.ar"
@@ -80,7 +81,7 @@ export default function Navbar() {
             TICKETS DISPONIBLES
           </a>
 
-          {/* Menú Mobile Trigger */}
+          {/* Menú celu trigger en celu */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden p-2 text-white hover:text-yellow-400 focus:outline-none"
@@ -112,7 +113,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Drawer Mobile */}
+      {/* Menú lateral en el celu */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-black/95 border-b border-white/15 px-6 py-6 animate-fadeIn">
           <div className="flex flex-col gap-5">
@@ -143,7 +144,7 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* Progress bar al estilo de Lollapalooza AR */}
+      {/* Barra de progreso de colores al estilo Lolla */}
       <div className="w-full bg-white/10 h-2.5 overflow-hidden">
         <div
           className="bg-gradient-to-r from-yellow-400 via-orange-500 to-fuchsia-500 h-full transition-all duration-150"

@@ -42,7 +42,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 pt-32 pb-20 overflow-hidden bg-zinc-950"
+      className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 pt-32 pb-20 overflow-hidden bg-zinc-950 scroll-mt-20"
     >
       {/* Video de Fondo (ubicado en la carpeta public/hero-video.mp4) */}
       <video
@@ -63,7 +63,7 @@ export default function Hero() {
         22 DE NOVIEMBRE 2026
       </div>
 
-      {/* Bloques de Banner al estilo Cosquín Rock (Semántica H1 para SEO) */}
+      {/* Bloques naranjas de texto al estilo Cosquín (tiene semántica H1 para SEO) */}
       <h1 className="relative z-10 flex flex-col items-center justify-center gap-2 sm:gap-3 mb-10 sm:mb-12">
         <span className="bg-[#d94814] text-white font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl uppercase px-2.5 py-1 sm:px-4 md:px-4.5 lg:px-5 sm:py-2 tracking-tight shadow-2xl block">
           CHAPAFESTIVAL 2026
@@ -116,7 +116,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Botones de Acción / CTA */}
+      {/* Botón de ticketera para comprar entradas */}
       <div className="relative z-10 mt-10">
         <a
           href="https://www.entradaweb.com.ar"

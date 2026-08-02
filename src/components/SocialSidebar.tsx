@@ -74,7 +74,7 @@ export default function SocialSidebar() {
         >
           {social.icon}
 
-          {/* Tooltip de marca */}
+          {/* esta es la etiqueta flotante que aparece en cada red al pasar el mouse */}
           <span className="absolute left-14 bg-black text-white font-heading font-semibold text-xs tracking-widest uppercase px-2.5 py-1 rounded border border-white/20 whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity">
             {social.name}
           </span>
