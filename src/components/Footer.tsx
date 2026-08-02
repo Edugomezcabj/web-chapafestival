@@ -28,7 +28,7 @@ export default function Footer() {
               {/* Columna 1 */}
               <div>
                 <h4 className="font-heading font-bold text-xs sm:text-sm tracking-widest text-yellow-400 uppercase mb-6">
-                  FESTIVAL
+                  INFORMACIÓN
                 </h4>
                 <ul className="flex flex-col gap-3 font-sans text-sm text-white/80">
                   <li>
