@@ -1,55 +1,90 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
-// Subcomponente que anima cada palabra individualmente según el scroll
-const Word = ({ children, progress, range }: { children: string, progress: MotionValue<number>, range: [number, number] }) => {
-    const opacity = useTransform(progress, range, [0.15, 1]);
+// Registramos el plugin ScrollTrigger para que GSAP sepa calcular el scroll
+if (typeof window !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger, useGSAP);
+}
 
-    return (
-        <motion.span style={{ opacity }} className="text-white tracking-tight font-normal">
-            {children}
-        </motion.span>
-    );
+// Divide una palabra en pares de 2 caracteres ("cada dos letras")
+const splitIntoPairs = (word: string) => {
+    const pairs: string[] = [];
+    for (let i = 0; i < word.length; i += 2) {
+        pairs.push(word.slice(i, i + 2));
+    }
+    return pairs;
 };
 
 export default function Manifesto() {
     const containerRef = useRef<HTMLDivElement>(null);
+    const textRef = useRef<HTMLHeadingElement>(null);
 
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        // Acá está definido el intervalo de iluminación para el texto
-        offset: ["start 90%", "end 50%"], 
-    });
+    const text = "VUELVE EL FESTIVAL MÁS ESPERADO POR LA COMUNIDAD CHAPANAYA";
+    const words = text.split(" ");
 
-const text = "VUELVE EL FESTIVAL MÁS ESPERADO POR LA COMUNIDAD CHAPANAYA";
-const words = text.split(" ");
+    useGSAP(() => {
+        // Seleccionamos todos los pares de 2 letras dentro del h2
+        const pairsElements = gsap.utils.toArray<HTMLElement>(".char-pair");
 
-return (
-    <section
-        className="relative bg-zinc-950 min-h-screen flex flex-col items-center justify-center py-32 px-4 sm:px-6 overflow-hidden bg-fixed bg-center bg-cover"
-        style={{ backgroundImage: "url(/foto-4.jpg)" }}
-    >
-        {/* Capa oscura de contraste sobre la imagen de fondo */}
-        <div className="absolute inset-0 bg-black/75 z-0 pointer-events-none"></div>
+        // Estado inicial de opacidad baja
+        gsap.set(pairsElements, { opacity: 0.15 });
 
-        <div ref={containerRef} className="max-w-6xl mx-auto text-center relative z-10 flex flex-col items-center">
+        // Timeline simétrico:
+        // - 0% a 50%: Iluminación progresiva cada dos letras hasta que el bloque llega justo al centro
+        // - 50% a 100%: Apagado progresivo al seguir bajando desde el centro (y viceversa al subir)
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: containerRef.current,
+                start: "top 85%", // Arranca a iluminarse al entrar en pantalla
+                end: "bottom 15%", // Termina de apagarse al salir de pantalla
+                scrub: 0.5, // 0.5s de inercia sedosa y continua
+            },
+        });
 
-            <h2 className="font-display font-normal tracking-tight text-5xl sm:text-6xl md:text-8xl lg:text-[110px] leading-[0.9] uppercase flex flex-wrap justify-center gap-x-3 md:gap-x-6 gap-y-2 md:gap-y-4">
-                {words.map((word, i) => {
-                    const start = i / words.length;
-                    const end = start + (1 / words.length);
+        // 1) Iluminar gradualmente desde el inicio hasta el fin, completando justo en el centro del bloque
+        tl.to(pairsElements, {
+            opacity: 1,
+            stagger: 0.2,
+            duration: 1,
+            ease: "none",
+        })
+        // 2) Apagar progresivamente al descender desde el centro (para que al subir se ilumine desde la última palabra hacia la primera)
+        .to(pairsElements, {
+            opacity: 0.15,
+            stagger: 0.2, // Al scrollear en reversa (100% a 50%), esto ilumina desde la última letra hacia la primera
+            duration: 1,
+            ease: "none",
+        });
+    }, { scope: containerRef }); // Encapsulamos la animación solo en esta sección
 
-                    return (
-                        <Word key={i} progress={scrollYProgress} range={[start, end]}>
-                            {word}
-                        </Word>
-                    );
-                })}
-            </h2>
+    return (
+        <section
+            className="relative bg-zinc-950 min-h-screen flex flex-col items-center justify-center py-32 px-4 sm:px-6 overflow-hidden bg-fixed bg-center bg-cover"
+            style={{ backgroundImage: "url(/foto-4.jpg)" }}
+        >
+            {/* Capa oscura de contraste sobre la imagen de fondo */}
+            <div className="absolute inset-0 bg-black/75 z-0 pointer-events-none"></div>
 
-        </div>
-    </section>
-);
+            <div ref={containerRef} className="max-w-6xl mx-auto text-center relative z-10 flex flex-col items-center">
+
+                {/* Referenciamos el h2 para poder capturar sus hijos en la animación */}
+                <h2 ref={textRef} className="font-display font-normal tracking-tight text-5xl sm:text-6xl md:text-8xl lg:text-[110px] leading-[0.9] uppercase flex flex-wrap justify-center gap-x-3 md:gap-x-6 gap-y-2 md:gap-y-4">
+                    {words.map((word, wordIdx) => (
+                        <span key={wordIdx} className="inline-flex">
+                            {splitIntoPairs(word).map((pair, pairIdx) => (
+                                <span key={pairIdx} className="text-white tracking-tight font-normal char-pair">
+                                    {pair}
+                                </span>
+                            ))}
+                        </span>
+                    ))}
+                </h2>
+
+            </div>
+        </section>
+    );
 }
