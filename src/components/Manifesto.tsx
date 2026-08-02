@@ -21,10 +21,13 @@ const splitIntoPairs = (word: string) => {
 
 export default function Manifesto() {
     const containerRef = useRef<HTMLDivElement>(null);
-    const textRef = useRef<HTMLHeadingElement>(null);
+    const textRef = useRef<HTMLDivElement>(null);
 
-    const text = "VUELVE EL FESTIVAL MÁS ESPERADO POR LA COMUNIDAD CHAPANAYA";
-    const words = text.split(" ");
+    const paragraphs = [
+        "VUELVE EL FESTIVAL",
+        "MÁS ESPERADO POR",
+        "LA COMUNIDAD CHAPANAYA",
+    ];
 
     useGSAP(() => {
         // Seleccionamos todos los pares de 2 letras dentro del h2
@@ -52,13 +55,13 @@ export default function Manifesto() {
             duration: 1,
             ease: "none",
         })
-        // 2) Apagar progresivamente al descender desde el centro (para que al subir se ilumine desde la última palabra hacia la primera)
-        .to(pairsElements, {
-            opacity: 0.15,
-            stagger: 0.2, // Al scrollear en reversa (100% a 50%), esto ilumina desde la última letra hacia la primera
-            duration: 1,
-            ease: "none",
-        });
+            // 2) Apagar progresivamente al descender desde el centro (para que al subir se ilumine desde la última palabra hacia la primera)
+            .to(pairsElements, {
+                opacity: 0.15,
+                stagger: 0.2, // Al scrollear en reversa (100% a 50%), esto ilumina desde la última letra hacia la primera
+                duration: 1,
+                ease: "none",
+            });
     }, { scope: containerRef }); // Encapsulamos la animación solo en esta sección
 
     return (
@@ -71,18 +74,25 @@ export default function Manifesto() {
 
             <div ref={containerRef} className="max-w-6xl mx-auto text-center relative z-10 flex flex-col items-center">
 
-                {/* Referenciamos el h2 para poder capturar sus hijos en la animación */}
-                <h2 ref={textRef} className="font-display font-normal tracking-tight text-5xl sm:text-6xl md:text-8xl lg:text-[110px] leading-[0.9] uppercase flex flex-wrap justify-center gap-x-3 md:gap-x-6 gap-y-2 md:gap-y-4">
-                    {words.map((word, wordIdx) => (
-                        <span key={wordIdx} className="inline-flex">
-                            {splitIntoPairs(word).map((pair, pairIdx) => (
-                                <span key={pairIdx} className="text-white tracking-tight font-normal char-pair">
-                                    {pair}
+                {/* Referenciamos el contenedor de párrafos para capturar sus hijos en la animación */}
+                <div ref={textRef} className="flex flex-col items-center justify-center gap-y-4 sm:gap-y-6 md:gap-y-8">
+                    {paragraphs.map((para, paraIdx) => (
+                        <p
+                            key={paraIdx}
+                            className="font-display font-normal tracking-tight text-5xl sm:text-6xl md:text-8xl lg:text-[105px] leading-[0.9] uppercase flex flex-wrap justify-center gap-x-3 md:gap-x-6"
+                        >
+                            {para.split(" ").map((word, wordIdx) => (
+                                <span key={wordIdx} className="inline-flex">
+                                    {splitIntoPairs(word).map((pair, pairIdx) => (
+                                        <span key={pairIdx} className="text-white tracking-tight font-normal char-pair">
+                                            {pair}
+                                        </span>
+                                    ))}
                                 </span>
                             ))}
-                        </span>
+                        </p>
                     ))}
-                </h2>
+                </div>
 
             </div>
         </section>
