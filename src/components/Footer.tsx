@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Columna izquierda donde esta el título grande estilo minimalista */}
           <div className="lg:col-span-7 flex flex-col justify-between">
             <div>
-              <h3 className="font-black text-2xl sm:text-3xl md:text-4xl text-white tracking-tighter uppercase leading-tight max-w-xl">
+              <h3 className="font-display font-normal text-2xl sm:text-3xl md:text-4xl text-white tracking-tight uppercase leading-tight max-w-xl">
                 <span className="block">La fiesta más manija</span>
                 <span className="block">de Mendoza</span>
               </h3>

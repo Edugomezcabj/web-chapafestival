@@ -35,7 +35,7 @@ export default function ExperienceScroll() {
             {pillars.map((pillar) => (
                 <article
                     key={pillar.id}
-                    className="relative min-h-[80vh] md:min-h-screen flex items-center justify-center bg-fixed bg-center bg-cover overflow-hidden p-6"
+                    className="relative min-h-screen flex flex-col items-center justify-center py-32 px-4 sm:px-6 bg-fixed bg-center bg-cover overflow-hidden"
                     style={{ backgroundImage: `url(${pillar.image})` }}
                 >
                     <div className="absolute inset-0 bg-black/40"></div>

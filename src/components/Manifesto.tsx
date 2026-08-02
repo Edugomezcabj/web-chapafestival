@@ -28,7 +28,7 @@ const words = text.split(" ");
 
 return (
     <section
-        className="relative bg-zinc-950 min-h-screen flex items-center justify-center py-32 px-4 sm:px-6 overflow-hidden bg-fixed bg-center bg-cover"
+        className="relative bg-zinc-950 min-h-screen flex flex-col items-center justify-center py-32 px-4 sm:px-6 overflow-hidden bg-fixed bg-center bg-cover"
         style={{ backgroundImage: "url(/foto-4.jpg)" }}
     >
         {/* Capa oscura de contraste sobre la imagen de fondo */}
