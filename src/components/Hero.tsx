@@ -122,7 +122,7 @@ export default function Hero() {
           href="https://www.entradaweb.com.ar"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-[#d94814] hover:bg-[#bf3d0f] text-white font-display text-xl sm:text-2xl px-10 py-4 rounded-full transition-all transform hover:-translate-y-1 hover:scale-105 shadow-2xl tracking-wider uppercase border border-white/20"
+          className="inline-block bg-[#c43e00] hover:bg-[#a33500] text-white font-display text-xl sm:text-2xl px-10 py-4 rounded-full transition-all transform hover:-translate-y-1 hover:scale-105 shadow-2xl tracking-wider uppercase border border-white/20"
         >
           ADQUIRÍ TUS ENTRADAS
         </a>

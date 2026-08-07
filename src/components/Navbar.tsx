@@ -76,7 +76,7 @@ export default function Navbar() {
             href="https://www.entradaweb.com.ar"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-orange-500 hover:bg-orange-600 text-white font-display font-black text-sm sm:text-base px-6 py-2.5 rounded-full border-2 border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,0.9)] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.9)] hover:translate-x-0.5 hover:translate-y-0.5 transition-all tracking-wider uppercase"
+            className="bg-[#c43e00] hover:bg-[#a33500] text-white font-display font-black text-sm sm:text-base px-6 py-2.5 rounded-full border-2 border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,0.9)] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.9)] hover:translate-x-0.5 hover:translate-y-0.5 transition-all tracking-wider uppercase"
           >
             TICKETS DISPONIBLES
           </a>

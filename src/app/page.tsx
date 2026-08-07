@@ -1,10 +1,13 @@
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import SocialSidebar from "@/components/SocialSidebar";
 import Hero from "@/components/Hero";
-import Manifesto from "@/components/Manifesto";
-import ExperienceScroll from "@/components/ExperienceScroll";
-import SpotifyPlaylist from "@/components/SpotifyPlaylist";
-import Footer from "@/components/Footer";
+
+// Carga diferida de componentes debajo del fold para reducir JS inicial
+const Manifesto = dynamic(() => import("@/components/Manifesto"));
+const ExperienceScroll = dynamic(() => import("@/components/ExperienceScroll"));
+const SpotifyPlaylist = dynamic(() => import("@/components/SpotifyPlaylist"));
+const Footer = dynamic(() => import("@/components/Footer"));
 
 export default function Home() {
   return (
